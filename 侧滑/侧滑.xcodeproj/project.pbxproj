@@ -46,6 +46,8 @@
 		E8FBF58A1F29E73B0085AE6D /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FBF5841F29E73B0085AE6D /* SecondViewController.m */; };
 		E8FBF58B1F29E73B0085AE6D /* ThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FBF5861F29E73B0085AE6D /* ThreeViewController.m */; };
 		E8FBF58C1F29E73B0085AE6D /* WPShowHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FBF5881F29E73B0085AE6D /* WPShowHomeViewController.m */; };
+		E8FBF58F1F29EACC0085AE6D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8FBF58E1F29EACC0085AE6D /* UIKit.framework */; };
+		E8FBF5911F29EAD20085AE6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8FBF5901F29EAD20085AE6D /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +109,9 @@
 		E8FBF5861F29E73B0085AE6D /* ThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreeViewController.m; sourceTree = "<group>"; };
 		E8FBF5871F29E73B0085AE6D /* WPShowHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPShowHomeViewController.h; sourceTree = "<group>"; };
 		E8FBF5881F29E73B0085AE6D /* WPShowHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPShowHomeViewController.m; sourceTree = "<group>"; };
+		E8FBF58D1F29E8C70085AE6D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		E8FBF58E1F29EACC0085AE6D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E8FBF5901F29EAD20085AE6D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +119,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8FBF5911F29EAD20085AE6D /* Foundation.framework in Frameworks */,
+				E8FBF58F1F29EACC0085AE6D /* UIKit.framework in Frameworks */,
 				5D2B05E604C2D5E345E9441A /* libPods-侧滑.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -124,6 +131,8 @@
 		7CA33C212F9E2BDFFC0979F0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E8FBF5901F29EAD20085AE6D /* Foundation.framework */,
+				E8FBF58E1F29EACC0085AE6D /* UIKit.framework */,
 				71D623F4CCD4EC3C08E1D4BF /* libPods-侧滑.a */,
 			);
 			name = Frameworks;
@@ -169,6 +178,7 @@
 				E84EDC2C1F29974200A995C3 /* Assets.xcassets */,
 				E84EDC2E1F29974200A995C3 /* LaunchScreen.storyboard */,
 				E84EDC311F29974200A995C3 /* Info.plist */,
+				E8FBF58D1F29E8C70085AE6D /* PrefixHeader.pch */,
 				E84EDC201F29974200A995C3 /* Supporting Files */,
 			);
 			path = "侧滑";
@@ -513,7 +523,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -555,7 +565,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -567,6 +577,7 @@
 			baseConfigurationReference = 3F652D5F6566C250519ABD98 /* Pods-侧滑.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/侧滑/PrefixHeader.pch";
 				INFOPLIST_FILE = "侧滑/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hywin.--";
@@ -579,6 +590,7 @@
 			baseConfigurationReference = 61DAC38169CA917BEE74FAA2 /* Pods-侧滑.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/侧滑/PrefixHeader.pch";
 				INFOPLIST_FILE = "侧滑/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hywin.--";

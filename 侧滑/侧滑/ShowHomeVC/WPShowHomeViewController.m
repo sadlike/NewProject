@@ -7,8 +7,7 @@
 //
 
 #import "WPShowHomeViewController.h"
-#import "WPFactory.h"
-#import "WPCommon.h"
+
 #import "SecondViewController.h"
 #import "UINavigationController+WP.h"
 //#import "WPPathView.h"

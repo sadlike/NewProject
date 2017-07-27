@@ -8,7 +8,6 @@
 
 #import "WPNavigationViewController.h"
 #import "UIImage+WP.h"
-#import "WPCommon.h"
 
 @interface WPNavigationViewController ()<UIGestureRecognizerDelegate>
 

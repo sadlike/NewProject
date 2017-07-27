@@ -7,8 +7,7 @@
 //
 
 #import "WPBaseViewController.h"
-#import "WPCommon.h"
-#import "WPFactory.h"
+
 
 @interface WPBaseViewController ()<SWRevealViewControllerDelegate>
 
