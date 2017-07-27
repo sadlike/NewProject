@@ -1,0 +1,489 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5D2B05E604C2D5E345E9441A /* libPods-侧滑.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71D623F4CCD4EC3C08E1D4BF /* libPods-侧滑.a */; };
+		E84EDC221F29974200A995C3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E84EDC211F29974200A995C3 /* main.m */; };
+		E84EDC251F29974200A995C3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E84EDC241F29974200A995C3 /* AppDelegate.m */; };
+		E84EDC2B1F29974200A995C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E84EDC291F29974200A995C3 /* Main.storyboard */; };
+		E84EDC2D1F29974200A995C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E84EDC2C1F29974200A995C3 /* Assets.xcassets */; };
+		E84EDC301F29974200A995C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E84EDC2E1F29974200A995C3 /* LaunchScreen.storyboard */; };
+		E84EDC3C1F299CBE00A995C3 /* WPBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E84EDC3B1F299CBE00A995C3 /* WPBaseViewController.m */; };
+		E84EDC3F1F299CE800A995C3 /* WPNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E84EDC3E1F299CE800A995C3 /* WPNavigationViewController.m */; };
+		E84EDC431F299DF200A995C3 /* UIImage+WP.m in Sources */ = {isa = PBXBuildFile; fileRef = E84EDC421F299DF200A995C3 /* UIImage+WP.m */; };
+		E84EDC551F299F4600A995C3 /* WPCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = E84EDC541F299F4600A995C3 /* WPCommon.m */; };
+		E84EDC5A1F29A5AF00A995C3 /* WPShowHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E84EDC591F29A5AF00A995C3 /* WPShowHomeViewController.m */; };
+		E84EDC5F1F29A69A00A995C3 /* icon_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E84EDC5C1F29A69A00A995C3 /* icon_back@2x.png */; };
+		E84EDC601F29A69A00A995C3 /* icon_collect_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E84EDC5D1F29A69A00A995C3 /* icon_collect_normal@2x.png */; };
+		E84EDC611F29A69A00A995C3 /* icon_collect_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E84EDC5E1F29A69A00A995C3 /* icon_collect_pressed@2x.png */; };
+		E84EDC641F29A6F300A995C3 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E84EDC631F29A6F300A995C3 /* SecondViewController.m */; };
+		E84EDC671F29A70900A995C3 /* ThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E84EDC661F29A70900A995C3 /* ThreeViewController.m */; };
+		E84EDC6A1F29A76400A995C3 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E84EDC691F29A76400A995C3 /* LeftViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3F652D5F6566C250519ABD98 /* Pods-侧滑.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-侧滑.debug.xcconfig"; path = "Pods/Target Support Files/Pods-侧滑/Pods-侧滑.debug.xcconfig"; sourceTree = "<group>"; };
+		61DAC38169CA917BEE74FAA2 /* Pods-侧滑.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-侧滑.release.xcconfig"; path = "Pods/Target Support Files/Pods-侧滑/Pods-侧滑.release.xcconfig"; sourceTree = "<group>"; };
+		71D623F4CCD4EC3C08E1D4BF /* libPods-侧滑.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-侧滑.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E84EDC1D1F29974200A995C3 /* 侧滑.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "侧滑.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E84EDC211F29974200A995C3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E84EDC231F29974200A995C3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E84EDC241F29974200A995C3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E84EDC2A1F29974200A995C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E84EDC2C1F29974200A995C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E84EDC2F1F29974200A995C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E84EDC311F29974200A995C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E84EDC3A1F299CBE00A995C3 /* WPBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPBaseViewController.h; sourceTree = "<group>"; };
+		E84EDC3B1F299CBE00A995C3 /* WPBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPBaseViewController.m; sourceTree = "<group>"; };
+		E84EDC3D1F299CE800A995C3 /* WPNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPNavigationViewController.h; sourceTree = "<group>"; };
+		E84EDC3E1F299CE800A995C3 /* WPNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPNavigationViewController.m; sourceTree = "<group>"; };
+		E84EDC411F299DF200A995C3 /* UIImage+WP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WP.h"; sourceTree = "<group>"; };
+		E84EDC421F299DF200A995C3 /* UIImage+WP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WP.m"; sourceTree = "<group>"; };
+		E84EDC531F299F4600A995C3 /* WPCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPCommon.h; sourceTree = "<group>"; };
+		E84EDC541F299F4600A995C3 /* WPCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPCommon.m; sourceTree = "<group>"; };
+		E84EDC581F29A5AF00A995C3 /* WPShowHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPShowHomeViewController.h; sourceTree = "<group>"; };
+		E84EDC591F29A5AF00A995C3 /* WPShowHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPShowHomeViewController.m; sourceTree = "<group>"; };
+		E84EDC5C1F29A69A00A995C3 /* icon_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_back@2x.png"; sourceTree = "<group>"; };
+		E84EDC5D1F29A69A00A995C3 /* icon_collect_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_collect_normal@2x.png"; sourceTree = "<group>"; };
+		E84EDC5E1F29A69A00A995C3 /* icon_collect_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_collect_pressed@2x.png"; sourceTree = "<group>"; };
+		E84EDC621F29A6F300A995C3 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		E84EDC631F29A6F300A995C3 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		E84EDC651F29A70900A995C3 /* ThreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreeViewController.h; sourceTree = "<group>"; };
+		E84EDC661F29A70900A995C3 /* ThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreeViewController.m; sourceTree = "<group>"; };
+		E84EDC681F29A76400A995C3 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
+		E84EDC691F29A76400A995C3 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E84EDC1A1F29974200A995C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D2B05E604C2D5E345E9441A /* libPods-侧滑.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7CA33C212F9E2BDFFC0979F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				71D623F4CCD4EC3C08E1D4BF /* libPods-侧滑.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9121F80FF2C3C572A3E61C26 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3F652D5F6566C250519ABD98 /* Pods-侧滑.debug.xcconfig */,
+				61DAC38169CA917BEE74FAA2 /* Pods-侧滑.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E84EDC141F29974200A995C3 = {
+			isa = PBXGroup;
+			children = (
+				E84EDC1F1F29974200A995C3 /* 侧滑 */,
+				E84EDC5B1F29A69A00A995C3 /* ImageSource */,
+				E84EDC1E1F29974200A995C3 /* Products */,
+				9121F80FF2C3C572A3E61C26 /* Pods */,
+				7CA33C212F9E2BDFFC0979F0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E84EDC1E1F29974200A995C3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E84EDC1D1F29974200A995C3 /* 侧滑.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E84EDC1F1F29974200A995C3 /* 侧滑 */ = {
+			isa = PBXGroup;
+			children = (
+				E84EDC571F29A57E00A995C3 /* ShowHomeViewController */,
+				E84EDC561F29A55C00A995C3 /* BaseViewController */,
+				E84EDC521F299F0900A995C3 /* CommonModel */,
+				E84EDC401F299DC200A995C3 /* Category */,
+				E84EDC231F29974200A995C3 /* AppDelegate.h */,
+				E84EDC241F29974200A995C3 /* AppDelegate.m */,
+				E84EDC291F29974200A995C3 /* Main.storyboard */,
+				E84EDC2C1F29974200A995C3 /* Assets.xcassets */,
+				E84EDC2E1F29974200A995C3 /* LaunchScreen.storyboard */,
+				E84EDC311F29974200A995C3 /* Info.plist */,
+				E84EDC201F29974200A995C3 /* Supporting Files */,
+				E84EDC621F29A6F300A995C3 /* SecondViewController.h */,
+				E84EDC631F29A6F300A995C3 /* SecondViewController.m */,
+				E84EDC651F29A70900A995C3 /* ThreeViewController.h */,
+				E84EDC661F29A70900A995C3 /* ThreeViewController.m */,
+				E84EDC681F29A76400A995C3 /* LeftViewController.h */,
+				E84EDC691F29A76400A995C3 /* LeftViewController.m */,
+			);
+			path = "侧滑";
+			sourceTree = "<group>";
+		};
+		E84EDC201F29974200A995C3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E84EDC211F29974200A995C3 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E84EDC401F299DC200A995C3 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				E84EDC411F299DF200A995C3 /* UIImage+WP.h */,
+				E84EDC421F299DF200A995C3 /* UIImage+WP.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		E84EDC521F299F0900A995C3 /* CommonModel */ = {
+			isa = PBXGroup;
+			children = (
+				E84EDC531F299F4600A995C3 /* WPCommon.h */,
+				E84EDC541F299F4600A995C3 /* WPCommon.m */,
+			);
+			name = CommonModel;
+			sourceTree = "<group>";
+		};
+		E84EDC561F29A55C00A995C3 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E84EDC3A1F299CBE00A995C3 /* WPBaseViewController.h */,
+				E84EDC3B1F299CBE00A995C3 /* WPBaseViewController.m */,
+				E84EDC3D1F299CE800A995C3 /* WPNavigationViewController.h */,
+				E84EDC3E1F299CE800A995C3 /* WPNavigationViewController.m */,
+			);
+			name = BaseViewController;
+			sourceTree = "<group>";
+		};
+		E84EDC571F29A57E00A995C3 /* ShowHomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E84EDC581F29A5AF00A995C3 /* WPShowHomeViewController.h */,
+				E84EDC591F29A5AF00A995C3 /* WPShowHomeViewController.m */,
+			);
+			name = ShowHomeViewController;
+			sourceTree = "<group>";
+		};
+		E84EDC5B1F29A69A00A995C3 /* ImageSource */ = {
+			isa = PBXGroup;
+			children = (
+				E84EDC5C1F29A69A00A995C3 /* icon_back@2x.png */,
+				E84EDC5D1F29A69A00A995C3 /* icon_collect_normal@2x.png */,
+				E84EDC5E1F29A69A00A995C3 /* icon_collect_pressed@2x.png */,
+			);
+			name = ImageSource;
+			path = "侧滑/ImageSource";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E84EDC1C1F29974200A995C3 /* 侧滑 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E84EDC341F29974200A995C3 /* Build configuration list for PBXNativeTarget "侧滑" */;
+			buildPhases = (
+				E884BA03C1015D774B97E619 /* [CP] Check Pods Manifest.lock */,
+				E84EDC191F29974200A995C3 /* Sources */,
+				E84EDC1A1F29974200A995C3 /* Frameworks */,
+				E84EDC1B1F29974200A995C3 /* Resources */,
+				89D8422AC4D0BDEBC542534F /* [CP] Embed Pods Frameworks */,
+				C3160E144BE7EF933BF6505B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "侧滑";
+			productName = "侧滑";
+			productReference = E84EDC1D1F29974200A995C3 /* 侧滑.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E84EDC151F29974200A995C3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = wwp;
+				TargetAttributes = {
+					E84EDC1C1F29974200A995C3 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = E84EDC181F29974200A995C3 /* Build configuration list for PBXProject "侧滑" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E84EDC141F29974200A995C3;
+			productRefGroup = E84EDC1E1F29974200A995C3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E84EDC1C1F29974200A995C3 /* 侧滑 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E84EDC1B1F29974200A995C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E84EDC301F29974200A995C3 /* LaunchScreen.storyboard in Resources */,
+				E84EDC2D1F29974200A995C3 /* Assets.xcassets in Resources */,
+				E84EDC5F1F29A69A00A995C3 /* icon_back@2x.png in Resources */,
+				E84EDC611F29A69A00A995C3 /* icon_collect_pressed@2x.png in Resources */,
+				E84EDC601F29A69A00A995C3 /* icon_collect_normal@2x.png in Resources */,
+				E84EDC2B1F29974200A995C3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		89D8422AC4D0BDEBC542534F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-侧滑/Pods-侧滑-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3160E144BE7EF933BF6505B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-侧滑/Pods-侧滑-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E884BA03C1015D774B97E619 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E84EDC191F29974200A995C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E84EDC551F299F4600A995C3 /* WPCommon.m in Sources */,
+				E84EDC6A1F29A76400A995C3 /* LeftViewController.m in Sources */,
+				E84EDC3F1F299CE800A995C3 /* WPNavigationViewController.m in Sources */,
+				E84EDC431F299DF200A995C3 /* UIImage+WP.m in Sources */,
+				E84EDC251F29974200A995C3 /* AppDelegate.m in Sources */,
+				E84EDC641F29A6F300A995C3 /* SecondViewController.m in Sources */,
+				E84EDC5A1F29A5AF00A995C3 /* WPShowHomeViewController.m in Sources */,
+				E84EDC671F29A70900A995C3 /* ThreeViewController.m in Sources */,
+				E84EDC3C1F299CBE00A995C3 /* WPBaseViewController.m in Sources */,
+				E84EDC221F29974200A995C3 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E84EDC291F29974200A995C3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E84EDC2A1F29974200A995C3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E84EDC2E1F29974200A995C3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E84EDC2F1F29974200A995C3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E84EDC321F29974200A995C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E84EDC331F29974200A995C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E84EDC351F29974200A995C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F652D5F6566C250519ABD98 /* Pods-侧滑.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "侧滑/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hywin.--";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E84EDC361F29974200A995C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61DAC38169CA917BEE74FAA2 /* Pods-侧滑.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "侧滑/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hywin.--";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E84EDC181F29974200A995C3 /* Build configuration list for PBXProject "侧滑" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E84EDC321F29974200A995C3 /* Debug */,
+				E84EDC331F29974200A995C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E84EDC341F29974200A995C3 /* Build configuration list for PBXNativeTarget "侧滑" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E84EDC351F29974200A995C3 /* Debug */,
+				E84EDC361F29974200A995C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E84EDC151F29974200A995C3 /* Project object */;
+}
