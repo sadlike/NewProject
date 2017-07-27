@@ -48,6 +48,11 @@
 		E8FBF58C1F29E73B0085AE6D /* WPShowHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FBF5881F29E73B0085AE6D /* WPShowHomeViewController.m */; };
 		E8FBF58F1F29EACC0085AE6D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8FBF58E1F29EACC0085AE6D /* UIKit.framework */; };
 		E8FBF5911F29EAD20085AE6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8FBF5901F29EAD20085AE6D /* Foundation.framework */; };
+		E8FBF5981F29EEC60085AE6D /* HWGetAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FBF5941F29EEC60085AE6D /* HWGetAddressBook.m */; };
+		E8FBF5991F29EEC60085AE6D /* HWLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FBF5971F29EEC60085AE6D /* HWLocationManager.m */; };
+		E8FBF59B1F29EF230085AE6D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8FBF59A1F29EF230085AE6D /* CoreLocation.framework */; };
+		E8FBF59D1F29EF280085AE6D /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8FBF59C1F29EF280085AE6D /* AddressBookUI.framework */; };
+		E8FBF59F1F29EF3C0085AE6D /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8FBF59E1F29EF3C0085AE6D /* ContactsUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +117,13 @@
 		E8FBF58D1F29E8C70085AE6D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		E8FBF58E1F29EACC0085AE6D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E8FBF5901F29EAD20085AE6D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E8FBF5931F29EEC60085AE6D /* HWGetAddressBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWGetAddressBook.h; sourceTree = "<group>"; };
+		E8FBF5941F29EEC60085AE6D /* HWGetAddressBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWGetAddressBook.m; sourceTree = "<group>"; };
+		E8FBF5961F29EEC60085AE6D /* HWLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWLocationManager.h; sourceTree = "<group>"; };
+		E8FBF5971F29EEC60085AE6D /* HWLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWLocationManager.m; sourceTree = "<group>"; };
+		E8FBF59A1F29EF230085AE6D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		E8FBF59C1F29EF280085AE6D /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		E8FBF59E1F29EF3C0085AE6D /* ContactsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContactsUI.framework; path = System/Library/Frameworks/ContactsUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +131,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8FBF59F1F29EF3C0085AE6D /* ContactsUI.framework in Frameworks */,
+				E8FBF59D1F29EF280085AE6D /* AddressBookUI.framework in Frameworks */,
+				E8FBF59B1F29EF230085AE6D /* CoreLocation.framework in Frameworks */,
 				E8FBF5911F29EAD20085AE6D /* Foundation.framework in Frameworks */,
 				E8FBF58F1F29EACC0085AE6D /* UIKit.framework in Frameworks */,
 				5D2B05E604C2D5E345E9441A /* libPods-侧滑.a in Frameworks */,
@@ -131,6 +146,9 @@
 		7CA33C212F9E2BDFFC0979F0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E8FBF59E1F29EF3C0085AE6D /* ContactsUI.framework */,
+				E8FBF59C1F29EF280085AE6D /* AddressBookUI.framework */,
+				E8FBF59A1F29EF230085AE6D /* CoreLocation.framework */,
 				E8FBF5901F29EAD20085AE6D /* Foundation.framework */,
 				E8FBF58E1F29EACC0085AE6D /* UIKit.framework */,
 				71D623F4CCD4EC3C08E1D4BF /* libPods-侧滑.a */,
@@ -233,6 +251,8 @@
 		E8FBF5631F29E7270085AE6D /* WPVender */ = {
 			isa = PBXGroup;
 			children = (
+				E8FBF5921F29EEC60085AE6D /* WPGetAddressBook */,
+				E8FBF5951F29EEC60085AE6D /* WPLocationManager */,
 				E8FBF5641F29E7270085AE6D /* Category */,
 				E8FBF5691F29E7270085AE6D /* CommonModel */,
 				E8FBF56C1F29E7270085AE6D /* DCPathButton */,
@@ -298,6 +318,24 @@
 				E8FBF5881F29E73B0085AE6D /* WPShowHomeViewController.m */,
 			);
 			path = ShowHomeVC;
+			sourceTree = "<group>";
+		};
+		E8FBF5921F29EEC60085AE6D /* WPGetAddressBook */ = {
+			isa = PBXGroup;
+			children = (
+				E8FBF5931F29EEC60085AE6D /* HWGetAddressBook.h */,
+				E8FBF5941F29EEC60085AE6D /* HWGetAddressBook.m */,
+			);
+			path = WPGetAddressBook;
+			sourceTree = "<group>";
+		};
+		E8FBF5951F29EEC60085AE6D /* WPLocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				E8FBF5961F29EEC60085AE6D /* HWLocationManager.h */,
+				E8FBF5971F29EEC60085AE6D /* HWLocationManager.m */,
+			);
+			path = WPLocationManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -450,9 +488,11 @@
 				E8FBF57F1F29E7270085AE6D /* WPPathView.m in Sources */,
 				E8FBF5561F29E6710085AE6D /* WPBaseViewController.m in Sources */,
 				E84EDC251F29974200A995C3 /* AppDelegate.m in Sources */,
+				E8FBF5981F29EEC60085AE6D /* HWGetAddressBook.m in Sources */,
 				E8FBF5781F29E7270085AE6D /* UIImage+WP.m in Sources */,
 				E8FBF58B1F29E73B0085AE6D /* ThreeViewController.m in Sources */,
 				E8FBF57C1F29E7270085AE6D /* DCPathCenterButton.m in Sources */,
+				E8FBF5991F29EEC60085AE6D /* HWLocationManager.m in Sources */,
 				E8FBF58A1F29E73B0085AE6D /* SecondViewController.m in Sources */,
 				E8FBF57B1F29E7270085AE6D /* DCPathButton.m in Sources */,
 				E8FBF5891F29E73B0085AE6D /* LeftViewController.m in Sources */,

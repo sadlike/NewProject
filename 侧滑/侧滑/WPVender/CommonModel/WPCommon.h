@@ -5,6 +5,18 @@
 //  Created by wwp on 2017/7/27.
 //  Copyright © 2017年 wwp. All rights reserved.
 
+typedef NS_ENUM(NSInteger, SBaseHandlerReturnType) {
+    SBaseHandlerReturnTypeVerify,      //数据验证
+    SBaseHandlerReturnTypeSuccess,      //数据操作成功
+    SBaseHandlerReturnTypeAbnormal,     //数据操作异常
+    SBaseHandlerReturnTypeFailed,       //网络获取失败(无网络)
+    SBaseHandlerReturnTypeTimeout,      //网络获取失败(网络超时)
+    SBaseHandlerReturnTypeNoData,       //获取数据为空
+    SBaseHandlerReturnTypeNoMoreData,   //没有获取到更多数据
+};
+
+
+
 //按照1536iPad屏幕宽度比例换算
 #define IPAD_SCALE_UI_SCREEN (UI_SCREEN_WIDTH/1536.0)
 #define IPHONE_IPAD_SCALE_UI_SCREEN(iPhone_Size, iPad_Size) IS_IPAD?IPAD_SCALE_UI_SCREEN*iPad_Size: 1*iPhone_Size

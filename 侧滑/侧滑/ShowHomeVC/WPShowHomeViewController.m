@@ -12,10 +12,10 @@
 #import "UINavigationController+WP.h"
 //#import "WPPathView.h"
 #import "DCPathButton.h"
+#import "HWLocationManager.h"
+#import "HWGetAddressBook.h"
 
 @interface WPShowHomeViewController ()<DCPathButtonDelegate>
-//@property (nonatomic,strong) WPPathView * pathAnimationView;
-//@property (nonatomic , strong) DCPathButton *pathAnimationView;
 
 @end
 
@@ -88,7 +88,101 @@
 - (void)itemButtonTappedAtIndex:(NSUInteger)index
 {
     NSLog(@"You tap at index : %ld", index);
+    switch (index) {
+        case 0:
+        {
+            
+        }
+            break;
+        case 1:
+        {
+            [self getLocation];
+            
+        }
+            break;
+        case 2:
+        {
+            
+        }
+            break;
+        case 3:
+        {
+            [self getAddressBook];
+            
+        }
+            break;
+        case 4:
+        {
+            [self jumptoNext];
+        }
+            break;
+            
+        default:
+            break;
+    }
     ///
+}
+
+#pragma mark 拉通讯录
+-(void)getAddressBook
+{
+    if (!hwGetAddressBook) {
+        hwGetAddressBook = [[HWGetAddressBook  alloc]init];
+    }
+    hwGetAddressBook.target=self;
+    [hwGetAddressBook gainAddressBookInfoCompleteBlock:^(NSArray *allInfoArray, NSArray *chooseInfoArray, AddressBookInfoSuccessType successType, SBaseHandlerReturnType returnType) {
+        switch (returnType) {
+            case SBaseHandlerReturnTypeSuccess:
+            {
+                switch (successType) {
+                    case addressBookInfoAllPeopleType:
+                    {
+                        // 上传所有信息回调 do somethiing
+                    } break;
+                    case addressBookInfochoosePeopleType:{
+                        //选择了单个联系人后 do somethiing
+                    }break;
+                        
+                    default:
+                        break;
+                }
+            } break;
+            case SBaseHandlerReturnTypeFailed:{
+                //获取通讯录失败,回调 doSomething   .
+            }break;
+            default:
+                break;
+        }
+    }];
+    [hwGetAddressBook getUserAddressBookMessage];
+    
+}
+#pragma mark 获取定位
+-(void)getLocation
+{
+    if (!hwLocationManger) {
+        hwLocationManger= [[HWLocationManager alloc]init];
+    }
+    [hwLocationManger gainLocationCompleteBlock:^(id sender,NSString *locationProvince ,NSString *locationCity,NSString *locationArea, SBaseHandlerReturnType returnType) {
+        
+        switch (returnType) {
+            case SBaseHandlerReturnTypeSuccess:
+            {
+                //获取地理位置成功后do something
+                NSLog(@"--经度-%@--精度-%@---纬度-%@",sender,hwLocationManger.longitude,hwLocationManger.latitude);
+            }
+                break;
+            case SBaseHandlerReturnTypeFailed:
+            {
+            }
+                break;
+            default:
+                break;
+        }
+    }];
+    [hwLocationManger  getStartLocation];
+    
+ 
 }
 -(void)jumptoNext
 {
