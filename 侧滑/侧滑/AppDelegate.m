@@ -10,7 +10,8 @@
 #import <SWRevealViewController.h>
 #import "WPBaseViewController.h"
 #import "WPNavigationViewController.h"
-
+#import "WPShowHomeViewController.h"
+#import "LeftViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -20,7 +21,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor=[UIColor blackColor];
+    self.window.backgroundColor=[UIColor whiteColor];
+    WPShowHomeViewController *show=[[WPShowHomeViewController alloc]init];
+    LeftViewController *left=[[LeftViewController alloc]init];
+    WPNavigationViewController *nav=[[WPNavigationViewController alloc]initWithRootViewController:show];
+    SWRevealViewController *reveal = [[SWRevealViewController alloc]initWithRearViewController:left frontViewController:nav];
+
+    self.window.rootViewController = reveal;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

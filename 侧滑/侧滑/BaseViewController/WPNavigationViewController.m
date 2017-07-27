@@ -21,6 +21,7 @@
     //设置背景图片
     UIImage *backImg=[UIImage imageWithColor:COLOR_CB];
     [navigationBar setBackgroundImage:backImg forBarMetrics:UIBarMetricsDefault];
+    [navigationBar setShadowImage:[UIImage new]];
     // 设置标题文字颜色
     NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
     attrs[NSForegroundColorAttributeName] = [UIColor whiteColor];
@@ -41,7 +42,9 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //右滑返回
+    [self.view setBackgroundColor:[UIColor whiteColor]];
+    
+//    //右滑返回
     if([self respondsToSelector:@selector(interactivePopGestureRecognizer)])
     {
         self.interactivePopGestureRecognizer.delegate=self;

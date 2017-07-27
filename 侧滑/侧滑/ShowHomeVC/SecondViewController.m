@@ -8,7 +8,7 @@
 
 #import "SecondViewController.h"
 
-@interface SecondViewController ()
+@interface SecondViewController ()<UIGestureRecognizerDelegate>
 
 @end
 
@@ -17,8 +17,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title=@"第二层页面";
+    [self.view setBackgroundColor:[UIColor whiteColor]];
+    
     [self setNavigationBar:self.revealViewController btnImageNameStr:@"icon_back@2x" Type:0];
     
+}
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+
 }
 
 - (void)didReceiveMemoryWarning {

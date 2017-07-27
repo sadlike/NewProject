@@ -8,6 +8,8 @@
 
 #import "WPBaseViewController.h"
 #import "WPCommon.h"
+#import "WPFactory.h"
+
 @interface WPBaseViewController ()<SWRevealViewControllerDelegate>
 
 @end
@@ -16,6 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.view setBackgroundColor:[UIColor whiteColor]];
+    
     if ([self respondsToSelector:@selector(edgesForExtendedLayout)]){
         self.edgesForExtendedLayout = UIRectEdgeNone;
     }
@@ -23,22 +27,33 @@
     SWRevealViewController *revealVC = self.revealViewController;
     revealVC.delegate = self;
     if (revealVC != nil) {
-        revealVC.rearViewRevealWidth = UI_SCREEN_WIDTH-(AUTO_SIZE(100));
+        revealVC.rearViewRevealWidth =AUTO_SIZE(100);
         [revealVC panGestureRecognizer];
+        [revealVC tapGestureRecognizer];
     }
 }
+#pragma mark - SWRevealViewController delegate
+//如果是带有返回按钮则不响应PanGesture
+- (BOOL)revealControllerPanGestureShouldBegin:(SWRevealViewController *)revealController
+{
+    if (self.tapActionType == TapActionTypeBack) {
+        return NO;
+    }else{
+        return YES;
+    }
+}
+
 -(void)setNavigationBar:(SWRevealViewController *)reveal btnImageNameStr:(NSString *)imageStr Type:(TapActionType)type{
     self.tapActionType = type;
     switch (self.tapActionType) {
         case 0://返回
         {
-            UIBarButtonItem *leftBarBtn=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:imageStr] style:UIBarButtonItemStylePlain target:self action:@selector(backHome)];
+            UIBarButtonItem *leftBarBtn= [WPFactory CreateImgButtonName:imageStr target:self action:@selector(backHome)];
             self.navigationItem.leftBarButtonItem = leftBarBtn;
-            
         }break;
         case 1:
         {
-            UIBarButtonItem *leftBarBtn=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:imageStr] style:UIBarButtonItemStylePlain target:self action:@selector(showLeftView)];
+            UIBarButtonItem *leftBarBtn= [WPFactory CreateImgButtonName:imageStr target:self action:@selector(showLeftView)];
             self.navigationItem.leftBarButtonItem = leftBarBtn;
         }break;
             
@@ -54,7 +69,11 @@
 }
 -(void)backHome
 {
-    [self.navigationController popViewControllerAnimated:YES];
+    if (self.parentViewController.childViewControllers.count>1) {
+        [self.navigationController popViewControllerAnimated:YES];
+    } else if (self.presentingViewController) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle

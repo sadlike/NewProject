@@ -8,6 +8,7 @@
 
 #import "LeftViewController.h"
 #import "WPShowHomeViewController.h"
+#import "WPNavigationViewController.h"
 
 @interface LeftViewController ()
 
@@ -18,6 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.view setBackgroundColor:[UIColor greenColor]];
+    
     //增加点击收拾切换
     UITapGestureRecognizer *pushFrontVC = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(pushFrontVC)];
     [self.view addGestureRecognizer:pushFrontVC];
@@ -27,9 +30,10 @@
 - (void)pushFrontVC
 {
     WPShowHomeViewController *navc = [[WPShowHomeViewController alloc]init];
-    ;
+    WPNavigationViewController *nav=[[WPNavigationViewController alloc]initWithRootViewController:navc];
     SWRevealViewController *revealVC = self.revealViewController;
-    [revealVC pushFrontViewController:navc animated:YES];
+    [revealVC pushFrontViewController:nav animated:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning {
