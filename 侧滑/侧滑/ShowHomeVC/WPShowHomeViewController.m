@@ -224,7 +224,7 @@
         [cancelAction setValue:[UIColor randomColor] forKey:@"_titleTextColor"];
 
         UIAlertAction *okAction = [UIAlertAction actionWithTitle:next style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            
+            [self jumptoNext];
         }];
          [okAction setValue:[UIColor randomColor] forKey:@"_titleTextColor"];
         //修改标题的内容，字号，颜色。使用的key值是“attributedTitle”
@@ -232,12 +232,8 @@
         [hogan addAttribute:NSFontAttributeName value:FONT_T18 range:NSMakeRange(0, [[hogan string] length])];
         [hogan addAttribute:NSForegroundColorAttributeName value:[UIColor randomColor] range:NSMakeRange(0, [[hogan string] length])];
         [alertController setValue:hogan forKey:@"attributedTitle"];
-
-        
         [alertController addAction:cancelAction];
         [alertController addAction:okAction];
-        
-        
         [self presentViewController:alertController animated:YES completion:nil];
     }
     else
@@ -264,18 +260,18 @@
             break;
         case 2:
         {
-            
+             [self getAddressBook];
         }
             break;
         case 3:
         {
-            [self getAddressBook];
-            
+           
+            [self jumptoNext];
         }
             break;
-        case 4:
+        case 4://换肤
         {
-            [self jumptoNext];
+          
         }
             break;
             
