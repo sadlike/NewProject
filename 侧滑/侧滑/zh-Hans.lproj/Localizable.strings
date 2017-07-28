@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  侧滑
+
+  Created by wwp on 2017/7/28.
+  Copyright © 2017年 wwp. All rights reserved.
+*/
+"click" = "点击";
+"Home" = "首页";
+"The main title for the AD" = "广告的主标题";
+"The subtitle of advertising" = "广告的副标题";
+"Second" = "第二层";

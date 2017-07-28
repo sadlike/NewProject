@@ -24,7 +24,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.navigationController.navigationBar.hidden=YES;
+//    self.navigationController.navigationBar.hidden=YES;
 }
 -(void)viewWillDisappear:(BOOL)animated
 {
@@ -40,7 +40,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor whiteColor]];
-    self.title=@"首页";
+    NSString *titleStr= NSLocalizedString(@"Home", nil);
+    self.title=titleStr;
     [self setNavigationBar:self.revealViewController btnImageNameStr:@"icon_collect_normal" Type:1];
     [self initPathButton];
     [self initAdView];

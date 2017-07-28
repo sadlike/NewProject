@@ -121,7 +121,7 @@
         titleView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.8];
         [titleBackView addSubview:titleView];
         UILabel *titleLabel=[[UILabel alloc]initWithFrame:CGRectMake(0, AUTO_SIZE(15), titleView.width, AUTO_SIZE(30))];
-        titleLabel.text=@"广告的主标题";
+        titleLabel.text=NSLocalizedString(@"The main title for the AD", nil);
         titleLabel.font=FONT_T18;
         titleLabel.textColor=COLOR_C3;
         titleLabel.backgroundColor=[UIColor clearColor];
@@ -129,7 +129,7 @@
         [titleView addSubview:titleLabel];
         
         UILabel *detailLabel=[[UILabel alloc]initWithFrame:CGRectMake(0, titleLabel.height+titleLabel.frame.origin.y, titleView.width, AUTO_SIZE(20))];
-        detailLabel.text=@"广告的副标题";
+        detailLabel.text=NSLocalizedString(@"The subtitle of advertising", nil);
         detailLabel.font=FONT_t15;
         detailLabel.textColor=COLOR_CBD;
         detailLabel.textAlignment=NSTextAlignmentCenter;

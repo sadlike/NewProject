@@ -16,11 +16,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title=@"第二层页面";
+    [self setupNavigationBar];
+}
+-(void)setupNavigationBar
+{
+    NSString *titleStr= NSLocalizedString(@"Second", nil);
+    self.title=titleStr;
     [self.view setBackgroundColor:[UIColor whiteColor]];
-    
     [self setNavigationBar:self.revealViewController btnImageNameStr:@"icon_back@2x" Type:0];
-    
 }
 -(void)viewWillAppear:(BOOL)animated
 {
