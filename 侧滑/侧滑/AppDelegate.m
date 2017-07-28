@@ -26,7 +26,6 @@
     LeftViewController *left=[[LeftViewController alloc]init];
     WPNavigationViewController *nav=[[WPNavigationViewController alloc]initWithRootViewController:show];
     SWRevealViewController *reveal = [[SWRevealViewController alloc]initWithRearViewController:left frontViewController:nav];
-
     self.window.rootViewController = reveal;
     [self.window makeKeyAndVisible];
     

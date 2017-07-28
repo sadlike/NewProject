@@ -14,12 +14,28 @@
 #import "DCPathButton.h"
 #import "HWLocationManager.h"
 #import "HWGetAddressBook.h"
+#import "ShowAdvertisementView.h"
 
-@interface WPShowHomeViewController ()<DCPathButtonDelegate>
+@interface WPShowHomeViewController ()<DCPathButtonDelegate,ShowAdvertisementViewDelegate>
 
 @end
 
 @implementation WPShowHomeViewController
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.hidden=YES;
+}
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:NO];
+    
+}
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,18 +43,27 @@
     self.title=@"首页";
     [self setNavigationBar:self.revealViewController btnImageNameStr:@"icon_collect_normal" Type:1];
     [self initPathButton];
-    
-//    UILabel *label = [WPFactory createLabelWithFrame:CGRectMake(0, 0, 300, 50) text:@"label" textColor:COLOR_CC font:15];
-//    [self.view addSubview:label];
-//    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [btn setFrame:CGRectMake(50, 200, 50, 40)];
-//    [btn setTitle:@"点击" forState:UIControlStateNormal];
-//    [btn setTitleColor:COLOR_BLACK forState:UIControlStateNormal];
-//    [btn addTarget:self action:@selector(jumptoNext) forControlEvents:UIControlEventTouchUpInside];
-//    [self.view addSubview:btn];
+    [self initAdView];
+
 
 }
-
+-(void)initAdView
+{
+    UIView *headView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, UI_SCREEN_WIDTH, AUTO_SIZE(150))];
+    [headView setBackgroundColor:COLOR_WHITE];
+    ShowAdvertisementView *_contentPlayerView = [[ShowAdvertisementView alloc]initWithFrame:CGRectMake(0,0, UI_SCREEN_WIDTH, AUTO_SIZE(150)) withShowPageHeight:0 withShowLabel:YES];
+    _contentPlayerView.showPageFrameHeight = 2;
+    _contentPlayerView.showPageBottomSpace = 1;
+    _contentPlayerView.delegate = self;
+    _contentPlayerView.selectedItemColor = COLOR_CBD;
+    _contentPlayerView.normalItemColor = [COLOR_CB colorWithAlphaComponent:0.5];
+    _contentPlayerView.autoresizingMask = UIViewAutoresizingFlexibleWidth| UIViewAutoresizingFlexibleHeight;
+    _contentPlayerView.backgroundColor=[UIColor whiteColor];
+    //title  content  //数组个数>1 则可滑动
+    [_contentPlayerView setContentModelArray:@[@"banner-home@2x",@"banner-home@2x"]];
+    [headView addSubview:_contentPlayerView];
+    [self.view addSubview:headView];
+}
 -(void)initPathButton
 {
 //    WPPathView *dcPathButton = [[WPPathView alloc]initWithCenterImg:[UIImage imageNamed:@"chooser-button-tab"] hilightedImg:[UIImage imageNamed:@"chooser-button-tab-highlighted"]];
@@ -122,7 +147,11 @@
     }
     ///
 }
-
+- (void)advertisementViewSelectedIndex:(int)index
+{
+    NSLog(@"index---%d",index);
+    
+}
 #pragma mark 拉通讯录
 -(void)getAddressBook
 {

@@ -77,6 +77,7 @@ alpha:1.0]
 #define COLOR_CC (UIColorFromRGB(0xCCCCCC))
 #define COLOR_CB (UIColorFromRGB(0x3CDFFC))//浅蓝
 #define COLOR_CBD (UIColorFromRGB(0x3CB6FC))//深蓝
+#define COLOR_E2 (UIColorFromRGB(0xe2e2e2))
 
 #define COLOR_BAR (UIColorFromRGB(0x3E2C1A))//顶部navigationbar颜色
 

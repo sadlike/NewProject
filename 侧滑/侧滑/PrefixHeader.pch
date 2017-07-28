@@ -19,3 +19,4 @@
 #import<Foundation/Foundation.h>
 #import "WPFactory.h"
 #import "WPCommon.h"
+#import "UIView+WPFrame.h"

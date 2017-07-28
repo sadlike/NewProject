@@ -8,9 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		5D2B05E604C2D5E345E9441A /* libPods-侧滑.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71D623F4CCD4EC3C08E1D4BF /* libPods-侧滑.a */; };
+		E83638751F2AC87B00687116 /* UIView+WPFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = E83638741F2AC87B00687116 /* UIView+WPFrame.m */; };
+		E83638771F2ACACF00687116 /* banner-home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E83638761F2ACACF00687116 /* banner-home@2x.png */; };
+		E836387A1F2ADABE00687116 /* banner-home@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E83638791F2ADABE00687116 /* banner-home@3x.png */; };
+		E83638801F2AE2DB00687116 /* ShowAdvertisementView.m in Sources */ = {isa = PBXBuildFile; fileRef = E836387D1F2AE2DB00687116 /* ShowAdvertisementView.m */; };
+		E83638811F2AE2DB00687116 /* SShowPageShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = E836387F1F2AE2DB00687116 /* SShowPageShapeView.m */; };
 		E84EDC221F29974200A995C3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E84EDC211F29974200A995C3 /* main.m */; };
 		E84EDC251F29974200A995C3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E84EDC241F29974200A995C3 /* AppDelegate.m */; };
-		E84EDC2B1F29974200A995C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E84EDC291F29974200A995C3 /* Main.storyboard */; };
 		E84EDC2D1F29974200A995C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E84EDC2C1F29974200A995C3 /* Assets.xcassets */; };
 		E84EDC301F29974200A995C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E84EDC2E1F29974200A995C3 /* LaunchScreen.storyboard */; };
 		E84EDC5F1F29A69A00A995C3 /* icon_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E84EDC5C1F29A69A00A995C3 /* icon_back@2x.png */; };
@@ -59,11 +63,18 @@
 		3F652D5F6566C250519ABD98 /* Pods-侧滑.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-侧滑.debug.xcconfig"; path = "Pods/Target Support Files/Pods-侧滑/Pods-侧滑.debug.xcconfig"; sourceTree = "<group>"; };
 		61DAC38169CA917BEE74FAA2 /* Pods-侧滑.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-侧滑.release.xcconfig"; path = "Pods/Target Support Files/Pods-侧滑/Pods-侧滑.release.xcconfig"; sourceTree = "<group>"; };
 		71D623F4CCD4EC3C08E1D4BF /* libPods-侧滑.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-侧滑.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E83638731F2AC87B00687116 /* UIView+WPFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WPFrame.h"; sourceTree = "<group>"; };
+		E83638741F2AC87B00687116 /* UIView+WPFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WPFrame.m"; sourceTree = "<group>"; };
+		E83638761F2ACACF00687116 /* banner-home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner-home@2x.png"; sourceTree = "<group>"; };
+		E83638791F2ADABE00687116 /* banner-home@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner-home@3x.png"; sourceTree = "<group>"; };
+		E836387C1F2AE2DB00687116 /* ShowAdvertisementView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowAdvertisementView.h; sourceTree = "<group>"; };
+		E836387D1F2AE2DB00687116 /* ShowAdvertisementView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowAdvertisementView.m; sourceTree = "<group>"; };
+		E836387E1F2AE2DB00687116 /* SShowPageShapeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SShowPageShapeView.h; sourceTree = "<group>"; };
+		E836387F1F2AE2DB00687116 /* SShowPageShapeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SShowPageShapeView.m; sourceTree = "<group>"; };
 		E84EDC1D1F29974200A995C3 /* 侧滑.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "侧滑.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E84EDC211F29974200A995C3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E84EDC231F29974200A995C3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E84EDC241F29974200A995C3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E84EDC2A1F29974200A995C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E84EDC2C1F29974200A995C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E84EDC2F1F29974200A995C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E84EDC311F29974200A995C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -165,6 +176,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E836387B1F2AE2DB00687116 /* ShowAdvertisementView */ = {
+			isa = PBXGroup;
+			children = (
+				E836387C1F2AE2DB00687116 /* ShowAdvertisementView.h */,
+				E836387D1F2AE2DB00687116 /* ShowAdvertisementView.m */,
+				E836387E1F2AE2DB00687116 /* SShowPageShapeView.h */,
+				E836387F1F2AE2DB00687116 /* SShowPageShapeView.m */,
+			);
+			path = ShowAdvertisementView;
+			sourceTree = "<group>";
+		};
 		E84EDC141F29974200A995C3 = {
 			isa = PBXGroup;
 			children = (
@@ -192,7 +214,6 @@
 				E8FBF5631F29E7270085AE6D /* WPVender */,
 				E84EDC231F29974200A995C3 /* AppDelegate.h */,
 				E84EDC241F29974200A995C3 /* AppDelegate.m */,
-				E84EDC291F29974200A995C3 /* Main.storyboard */,
 				E84EDC2C1F29974200A995C3 /* Assets.xcassets */,
 				E84EDC2E1F29974200A995C3 /* LaunchScreen.storyboard */,
 				E84EDC311F29974200A995C3 /* Info.plist */,
@@ -213,8 +234,10 @@
 		E84EDC5B1F29A69A00A995C3 /* ImageSource */ = {
 			isa = PBXGroup;
 			children = (
+				E83638761F2ACACF00687116 /* banner-home@2x.png */,
 				E84EDC831F29E12B00A995C3 /* chooser-button-input-highlighted@2x.png */,
 				E84EDC841F29E12B00A995C3 /* chooser-button-input@2x.png */,
+				E83638791F2ADABE00687116 /* banner-home@3x.png */,
 				E84EDC851F29E12B00A995C3 /* chooser-button-tab-highlighted@2x.png */,
 				E84EDC861F29E12B00A995C3 /* chooser-button-tab@2x.png */,
 				E84EDC871F29E12B00A995C3 /* chooser-moment-button-highlighted@2x.png */,
@@ -251,6 +274,7 @@
 		E8FBF5631F29E7270085AE6D /* WPVender */ = {
 			isa = PBXGroup;
 			children = (
+				E836387B1F2AE2DB00687116 /* ShowAdvertisementView */,
 				E8FBF5921F29EEC60085AE6D /* WPGetAddressBook */,
 				E8FBF5951F29EEC60085AE6D /* WPLocationManager */,
 				E8FBF5641F29E7270085AE6D /* Category */,
@@ -268,6 +292,8 @@
 				E8FBF5661F29E7270085AE6D /* UIImage+WP.m */,
 				E8FBF5671F29E7270085AE6D /* UINavigationController+WP.h */,
 				E8FBF5681F29E7270085AE6D /* UINavigationController+WP.m */,
+				E83638731F2AC87B00687116 /* UIView+WPFrame.h */,
+				E83638741F2AC87B00687116 /* UIView+WPFrame.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -403,12 +429,14 @@
 				E84EDC301F29974200A995C3 /* LaunchScreen.storyboard in Resources */,
 				E84EDC9C1F29E12B00A995C3 /* chooser-moment-icon-music@2x.png in Resources */,
 				E84EDC991F29E12B00A995C3 /* chooser-moment-icon-camera-highlighted@2x.png in Resources */,
+				E83638771F2ACACF00687116 /* banner-home@2x.png in Resources */,
 				E84EDC9F1F29E12B00A995C3 /* chooser-moment-icon-sleep-highlighted@2x.png in Resources */,
 				E84EDC9B1F29E12B00A995C3 /* chooser-moment-icon-music-highlighted@2x.png in Resources */,
 				E84EDCA01F29E12B00A995C3 /* chooser-moment-icon-sleep@2x.png in Resources */,
 				E84EDC941F29E12B00A995C3 /* chooser-button-input@2x.png in Resources */,
 				E84EDC9A1F29E12B00A995C3 /* chooser-moment-icon-camera@2x.png in Resources */,
 				E84EDC9D1F29E12B00A995C3 /* chooser-moment-icon-place-highlighted@2x.png in Resources */,
+				E836387A1F2ADABE00687116 /* banner-home@3x.png in Resources */,
 				E84EDC2D1F29974200A995C3 /* Assets.xcassets in Resources */,
 				E84EDC5F1F29A69A00A995C3 /* icon_back@2x.png in Resources */,
 				E84EDC611F29A69A00A995C3 /* icon_collect_pressed@2x.png in Resources */,
@@ -416,7 +444,6 @@
 				E84EDC981F29E12B00A995C3 /* chooser-moment-button@2x.png in Resources */,
 				E84EDC9E1F29E12B00A995C3 /* chooser-moment-icon-place@2x.png in Resources */,
 				E84EDC601F29A69A00A995C3 /* icon_collect_normal@2x.png in Resources */,
-				E84EDC2B1F29974200A995C3 /* Main.storyboard in Resources */,
 				E84EDC961F29E12B00A995C3 /* chooser-button-tab@2x.png in Resources */,
 				E84EDC971F29E12B00A995C3 /* chooser-moment-button-highlighted@2x.png in Resources */,
 				E84EDC931F29E12B00A995C3 /* chooser-button-input-highlighted@2x.png in Resources */,
@@ -482,6 +509,7 @@
 				E8FBF57D1F29E7270085AE6D /* DCPathItemButton.m in Sources */,
 				E8FBF5791F29E7270085AE6D /* UINavigationController+WP.m in Sources */,
 				E8FBF57E1F29E7270085AE6D /* WPFactory.m in Sources */,
+				E83638751F2AC87B00687116 /* UIView+WPFrame.m in Sources */,
 				E8FBF5571F29E6710085AE6D /* WPNavigationViewController.m in Sources */,
 				E8FBF57A1F29E7270085AE6D /* WPCommon.m in Sources */,
 				E8FBF58C1F29E73B0085AE6D /* WPShowHomeViewController.m in Sources */,
@@ -490,11 +518,13 @@
 				E84EDC251F29974200A995C3 /* AppDelegate.m in Sources */,
 				E8FBF5981F29EEC60085AE6D /* HWGetAddressBook.m in Sources */,
 				E8FBF5781F29E7270085AE6D /* UIImage+WP.m in Sources */,
+				E83638811F2AE2DB00687116 /* SShowPageShapeView.m in Sources */,
 				E8FBF58B1F29E73B0085AE6D /* ThreeViewController.m in Sources */,
 				E8FBF57C1F29E7270085AE6D /* DCPathCenterButton.m in Sources */,
 				E8FBF5991F29EEC60085AE6D /* HWLocationManager.m in Sources */,
 				E8FBF58A1F29E73B0085AE6D /* SecondViewController.m in Sources */,
 				E8FBF57B1F29E7270085AE6D /* DCPathButton.m in Sources */,
+				E83638801F2AE2DB00687116 /* ShowAdvertisementView.m in Sources */,
 				E8FBF5891F29E73B0085AE6D /* LeftViewController.m in Sources */,
 				E84EDC221F29974200A995C3 /* main.m in Sources */,
 			);
@@ -503,14 +533,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E84EDC291F29974200A995C3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E84EDC2A1F29974200A995C3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E84EDC2E1F29974200A995C3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -563,7 +585,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -605,7 +627,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -619,6 +641,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/侧滑/PrefixHeader.pch";
 				INFOPLIST_FILE = "侧滑/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hywin.--";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -632,6 +655,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/侧滑/PrefixHeader.pch";
 				INFOPLIST_FILE = "侧滑/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hywin.--";
 				PRODUCT_NAME = "$(TARGET_NAME)";
