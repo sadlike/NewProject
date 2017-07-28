@@ -4,9 +4,14 @@
 
   Created by wwp on 2017/7/28.
   Copyright © 2017年 wwp. All rights reserved.
+ 本地语言化 参考 http://www.jianshu.com/p/88c1b65e3ddb
 */
 "click";
 "Home";
 "The main title for the AD";
 "The subtitle of advertising";
 "Second";
+"Congratulation";
+"Cancle";
+"Next" ;
+"Your Good Luck!";

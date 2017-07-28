@@ -15,6 +15,7 @@
 		E83638811F2AE2DB00687116 /* SShowPageShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = E836387F1F2AE2DB00687116 /* SShowPageShapeView.m */; };
 		E83638851F2B0F9900687116 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E83638871F2B0F9900687116 /* InfoPlist.strings */; };
 		E836388B1F2B124900687116 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E836388D1F2B124900687116 /* Localizable.strings */; };
+		E83638911F2B2AF700687116 /* NSArray+Sudoku.m in Sources */ = {isa = PBXBuildFile; fileRef = E83638901F2B2AF700687116 /* NSArray+Sudoku.m */; };
 		E84EDC221F29974200A995C3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E84EDC211F29974200A995C3 /* main.m */; };
 		E84EDC251F29974200A995C3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E84EDC241F29974200A995C3 /* AppDelegate.m */; };
 		E84EDC2D1F29974200A995C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E84EDC2C1F29974200A995C3 /* Assets.xcassets */; };
@@ -78,6 +79,8 @@
 		E83638881F2B0FB100687116 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		E836388C1F2B124900687116 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E836388E1F2B125200687116 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		E836388F1F2B2AF700687116 /* NSArray+Sudoku.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Sudoku.h"; sourceTree = "<group>"; };
+		E83638901F2B2AF700687116 /* NSArray+Sudoku.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Sudoku.m"; sourceTree = "<group>"; };
 		E84EDC1D1F29974200A995C3 /* 侧滑.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "侧滑.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E84EDC211F29974200A995C3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E84EDC231F29974200A995C3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -297,6 +300,8 @@
 		E8FBF5641F29E7270085AE6D /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				E836388F1F2B2AF700687116 /* NSArray+Sudoku.h */,
+				E83638901F2B2AF700687116 /* NSArray+Sudoku.m */,
 				E8FBF5651F29E7270085AE6D /* UIImage+WP.h */,
 				E8FBF5661F29E7270085AE6D /* UIImage+WP.m */,
 				E8FBF5671F29E7270085AE6D /* UINavigationController+WP.h */,
@@ -529,6 +534,7 @@
 				E8FBF5561F29E6710085AE6D /* WPBaseViewController.m in Sources */,
 				E84EDC251F29974200A995C3 /* AppDelegate.m in Sources */,
 				E8FBF5981F29EEC60085AE6D /* HWGetAddressBook.m in Sources */,
+				E83638911F2B2AF700687116 /* NSArray+Sudoku.m in Sources */,
 				E8FBF5781F29E7270085AE6D /* UIImage+WP.m in Sources */,
 				E83638811F2AE2DB00687116 /* SShowPageShapeView.m in Sources */,
 				E8FBF58B1F29E73B0085AE6D /* ThreeViewController.m in Sources */,

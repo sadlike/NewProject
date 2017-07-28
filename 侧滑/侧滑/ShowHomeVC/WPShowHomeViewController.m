@@ -15,12 +15,40 @@
 #import "HWLocationManager.h"
 #import "HWGetAddressBook.h"
 #import "ShowAdvertisementView.h"
+#import "NSArray+Sudoku.h"
 
+@implementation UIColor (Extensions)
+
+
++ (instancetype)randomColor {
+    
+    CGFloat red = arc4random_uniform(255) / 255.0;
+    CGFloat green = arc4random_uniform(255) / 255.0;
+    CGFloat blue = arc4random_uniform(255) / 255.0;
+    return [self colorWithRed:red green:green blue:blue alpha:1.0];
+}
+
+@end
 @interface WPShowHomeViewController ()<DCPathButtonDelegate,ShowAdvertisementViewDelegate>
-
+{
+    UIView *headView;
+    
+}
+@property(nonatomic,strong)UIView *containerView;//九宫格view
 @end
 
 @implementation WPShowHomeViewController
+-(UIView *)containerView
+{
+    if (!_containerView) {
+        UIView *containerView=[[UIView alloc]init];
+        containerView.backgroundColor = [UIColor whiteColor];
+        containerView.userInteractionEnabled=YES;
+        _containerView = containerView;
+    }
+    return  _containerView;
+    
+}
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -43,14 +71,18 @@
     NSString *titleStr= NSLocalizedString(@"Home", nil);
     self.title=titleStr;
     [self setNavigationBar:self.revealViewController btnImageNameStr:@"icon_collect_normal" Type:1];
-    [self initPathButton];
+
     [self initAdView];
-
-
+    [self.view addSubview:self.containerView];
+     [self distributeFixedCellWithCount:9 warp:3];
+//    [self autoLayOutContainerView];
+//    [self initSubViews];
+    
+    [self initPathButton];
 }
 -(void)initAdView
 {
-    UIView *headView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, UI_SCREEN_WIDTH, AUTO_SIZE(150))];
+    headView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, UI_SCREEN_WIDTH, AUTO_SIZE(150))];
     [headView setBackgroundColor:COLOR_WHITE];
     ShowAdvertisementView *_contentPlayerView = [[ShowAdvertisementView alloc]initWithFrame:CGRectMake(0,0, UI_SCREEN_WIDTH, AUTO_SIZE(150)) withShowPageHeight:0 withShowLabel:YES];
     _contentPlayerView.showPageFrameHeight = 2;
@@ -64,6 +96,15 @@
     [_contentPlayerView setContentModelArray:@[@"banner-home@2x",@"banner-home@2x"]];
     [headView addSubview:_contentPlayerView];
     [self.view addSubview:headView];
+}
+-(void)autoLayOutContainerView
+{
+    [self.containerView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view.mas_left).offset(15);
+        make.top.equalTo(headView.mas_bottom).offset(0);
+        make.width.and.height.equalTo(self.view.mas_width).offset(-30);
+    }];
+    
 }
 -(void)initPathButton
 {
@@ -109,6 +150,101 @@
     [self.view addSubview:dcPathButton];
 
 }
+-(void)initSubViews
+{
+    //每个Item宽高
+    CGFloat W = 80;
+    CGFloat H = 100;
+    //每行列数
+    NSInteger rank = 3;
+    //每列间距
+    CGFloat rankMargin = (self.view.frame.size.width-30 - rank * W) / (rank - 1);
+    //每行间距
+    CGFloat rowMargin = 20;
+    //Item索引 ->根据需求改变索引
+    NSUInteger index = 9;
+    
+    for (int i = 0 ; i< index; i++) {
+        //Item X轴
+        CGFloat X = (i % rank) * (W + rankMargin);
+        //Item Y轴
+        NSUInteger Y = (i / rank) * (H +rowMargin);
+        //Item top
+        CGFloat top = 10;
+        UIView *speedView = [[UIView alloc] init];
+        speedView.backgroundColor = [UIColor randomColor];
+//        speedView.backgroundColor=[UIColor grayColor];
+        speedView.frame = CGRectMake(X, Y+top, W, H);
+        [self.containerView  addSubview:speedView];
+    }
+}
+// 固定container大小
+// 固定宫格大小
+- (void)distributeFixedCellWithCount:(NSUInteger)count warp:(NSUInteger)warp {
+    
+    [self.containerView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [obj removeFromSuperview];
+    }];
+    
+    [self autoLayOutContainerView];
+    
+    for (int i = 0; i < count; i++) {
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [btn setTitle:[NSString stringWithFormat:@"%d",i+1] forState:UIControlStateNormal];
+        [btn setBackgroundColor:[UIColor randomColor]];
+        btn.tag=i;
+        [btn setTitleColor:[UIColor randomColor] forState:UIControlStateNormal];
+        [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+        [self.containerView addSubview:btn];
+    }
+    float space = AUTO_SIZE(10.0);
+    [self.containerView.subviews mas_distributeSudokuViewsWithFixedItemWidth:AUTO_SIZE(90)
+                                                             fixedItemHeight:AUTO_SIZE(90)
+                                                                   warpCount:warp
+                                                                  topSpacing:space
+                                                               bottomSpacing:space
+                                                                 leadSpacing:space
+                                                                 tailSpacing:space];
+}
+-(void)btnClick:(UIButton *)sender
+{
+    NSLog(@"sender--%ld",(long)sender.tag);
+    if (![sender.titleLabel.textColor isEqual:sender.backgroundColor]) {
+   
+        NSString *titleStr= NSLocalizedString(@"Congratulation", nil);
+        NSString *descrpition= NSLocalizedString(@"Your Good Luck!", nil);
+        NSString *cancel = NSLocalizedString(@"Cancle", nil);
+        NSString *next =NSLocalizedString(@"Next", nil);
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:titleStr message:descrpition preferredStyle:UIAlertControllerStyleAlert];
+
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:cancel style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+        }];
+       
+        [cancelAction setValue:[UIColor randomColor] forKey:@"_titleTextColor"];
+
+        UIAlertAction *okAction = [UIAlertAction actionWithTitle:next style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
+        }];
+         [okAction setValue:[UIColor randomColor] forKey:@"_titleTextColor"];
+        //修改标题的内容，字号，颜色。使用的key值是“attributedTitle”
+        NSMutableAttributedString *hogan = [[NSMutableAttributedString alloc] initWithString:titleStr];
+        [hogan addAttribute:NSFontAttributeName value:FONT_T18 range:NSMakeRange(0, [[hogan string] length])];
+        [hogan addAttribute:NSForegroundColorAttributeName value:[UIColor randomColor] range:NSMakeRange(0, [[hogan string] length])];
+        [alertController setValue:hogan forKey:@"attributedTitle"];
+
+        
+        [alertController addAction:cancelAction];
+        [alertController addAction:okAction];
+        
+        
+        [self presentViewController:alertController animated:YES completion:nil];
+    }
+    else
+    {
+        
+    }
+}
 #pragma mark - DCPathButton Delegate
 
 - (void)itemButtonTappedAtIndex:(NSUInteger)index
@@ -117,7 +253,7 @@
     switch (index) {
         case 0:
         {
-            
+               [self distributeFixedCellWithCount:9 warp:3];
         }
             break;
         case 1:
@@ -224,14 +360,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

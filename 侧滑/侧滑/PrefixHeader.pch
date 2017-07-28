@@ -20,3 +20,4 @@
 #import "WPFactory.h"
 #import "WPCommon.h"
 #import "UIView+WPFrame.h"
+#import <Masonry.h>
